@@ -25,12 +25,12 @@ const Checkout = () => {
         <div className="header-block">
           <span>Remove</span>
         </div>
-        {cartItems.map((cartItem) => (
-          <CheckoutItem key={cartItem.id} cartItem={cartItem}></CheckoutItem>
-        ))}
-
-        <span className="total">TOTAL: ${cartTotal}</span>
       </div>
+      {cartItems.map((cartItem) => (
+        <CheckoutItem key={cartItem.id} cartItem={cartItem}></CheckoutItem>
+      ))}
+
+      <span className="total">TOTAL: ${cartTotal}</span>
     </div>
   );
 };
