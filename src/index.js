@@ -20,7 +20,7 @@ ReactDOM.render(
           </CartProvider>
         </ProductsProvider>
       </UserProvider>
-    </BrowserRouter>
+    </BrowserRouter>x``
   </React.StrictMode>,
   document.getElementById("root")
 );
