@@ -18,6 +18,8 @@ import {
   setDoc,
   collection,
   writeBatch,
+  query,
+  getDocs
 } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -56,7 +58,7 @@ export const addCollectionAndDocuments = async (
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
 
-  // we only need to add data to the database once
+  // //we only need to add data to the database once
   // objectsToAdd.forEach((object) => {
   //   const docRef = doc(collectionRef, object.title.toLowerCase());
   //   batch.set(docRef, object);
@@ -114,3 +116,37 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, 'categories');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  var categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {})
+
+  return categoryMap;
+}
+
+//map
+/*
+{
+  hats:{
+    title: 'Hats',
+    items: [
+      {},
+      {}
+    ]
+  },
+  sneakers: {
+    title: 'Sneakers',
+    items: [
+      {},
+      {}
+    ]
+  }
+}
+*/
