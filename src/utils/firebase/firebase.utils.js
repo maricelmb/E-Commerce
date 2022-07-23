@@ -17,7 +17,7 @@ import {
   getDoc,
   setDoc,
   collection,
-  writeBatch
+  writeBatch,
 } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -49,8 +49,21 @@ export const signInWithGoogleRedirect = () =>
 
 export const db = getFirestore();
 
-export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
   const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+
+  // we only need to add data to the database once
+  // objectsToAdd.forEach((object) => {
+  //   const docRef = doc(collectionRef, object.title.toLowerCase());
+  //   batch.set(docRef, object);
+  // });
+
+  await batch.commit();
+  console.log("done");
 };
 
 export const createUserDocumentFromAuth = async (
