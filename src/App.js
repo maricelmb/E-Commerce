@@ -15,7 +15,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         {/* 'Index' will display if '/' is called */}
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
         <Route path='checkout' element={<Checkout />} />
       </Route>
