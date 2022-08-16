@@ -6,7 +6,8 @@ const Shop = () => {
   return (
     <Routes>
       <Route index element={<CategoriesPreview />}></Route>
-      <Route path=':category' element={<Category />} />
+      <Route path=":category" element={<Category />} />
+      heyroute
     </Routes>
   );
 };
