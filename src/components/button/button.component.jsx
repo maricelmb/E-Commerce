@@ -22,5 +22,5 @@ const Button = ({ children, buttonType, ...otherProps }) => {
   return <CustomButton {...otherProps}>{children}</CustomButton>;
 };
 
-export  default Button;
+export default Button;
 //export { BUTTON_TYPE_CLASSES} ;

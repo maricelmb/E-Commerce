@@ -7,7 +7,7 @@ import {
   signOutUser,
 } from "../../utils/firebase/firebase.utils";
 import "./sign-up-form.styles.scss";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { UserContext } from "../../contexts/user.context";
 
 const defaultFormFields = {
@@ -123,9 +123,13 @@ const SignUpForm = () => {
           value={confirmPassword}
         ></FormInput>
 
-        <Button buttonType="google" type="submit">
+        <Button buttonType={BUTTON_TYPE_CLASSES.google} type="submit">
           Sign Up
         </Button>
+
+        {/* <Button buttonType="google" type="submit">
+          Sign Up
+        </Button> */}
       </form>
     </div>
   );
