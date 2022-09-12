@@ -10,6 +10,7 @@ import {
 import { UserContext } from "../../contexts/user.context";
 
 import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
+
 import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
@@ -103,10 +104,12 @@ const SignInForm = () => {
 
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
+
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             onClick={signInWithGoogle}
           >
+
             Google Sign In
           </Button>
           {/* <Button onClick={signInWithGoogle} type="button">
