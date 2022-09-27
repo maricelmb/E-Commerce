@@ -1,10 +1,8 @@
-import { async } from "@firebase/util";
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import FormInput from "../form-input/form-input.component";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-  signOutUser,
 } from "../../utils/firebase/firebase.utils";
 import "./sign-up-form.styles.scss";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";

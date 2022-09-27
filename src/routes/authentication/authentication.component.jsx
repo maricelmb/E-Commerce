@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { getRedirectResult } from "firebase/auth";
+//import { useEffect } from "react";
+//import { getRedirectResult } from "firebase/auth";
 import "./authentication.styles.scss";
 
 // import {

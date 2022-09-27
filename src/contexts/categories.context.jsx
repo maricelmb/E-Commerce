@@ -1,10 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import {
-  addCollectionAndDocuments,
+  //addCollectionAndDocuments,
   getCategoriesAndDocuments,
 } from "../utils/firebase/firebase.utils.js";
 
-import SHOP_DATA from "../shop-data.js";
+//import SHOP_DATA from "../shop-data.js";
 
 export const CategoriesContext = createContext({
   categoriesMap: [],
