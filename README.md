@@ -1,5 +1,7 @@
 Description: This e-commerce website allows the user to register a new account.  It will then allow the user to  add items to cart.  If the user is already registered, then he only needs to login inorder to shop.
 
+Website: https://main--imaginative-treacle-31a917.netlify.app/shop
+
 Language: React, scss
 Database: Firabase
 
