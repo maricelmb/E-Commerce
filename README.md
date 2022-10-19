@@ -3,7 +3,7 @@ Description: This e-commerce website allows the user to register a new account. 
 Website: https://stirring-arithmetic-f68335.netlify.app/
 
 Language: React, scss
-Database: Firabase
+Database: Firebase
 
 [USE Case]
 Homepage:
