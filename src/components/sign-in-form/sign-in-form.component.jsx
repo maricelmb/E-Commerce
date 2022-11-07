@@ -33,7 +33,7 @@ const SignInForm = () => {
     await createUserDocumentFromAuth(user);
   };
 
-  console.log(formFields);
+  //console.log(formFields);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
