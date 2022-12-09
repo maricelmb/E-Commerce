@@ -1,6 +1,6 @@
 Description: This e-commerce website allows the user to register a new account.  It will then allow the user to  add items to cart.  If the user is already registered, then he only needs to login inorder to shop.
 
-Website: https://stirring-arithmetic-f68335.netlify.app/
+Website: https://stirring-arithmetic-f68335.netlify.app/  --> The live site is not from the master/main code but from this branch (pub/netlify_noRedux)
 
 Language: React, scss
 Database: Firebase
