@@ -1,1 +1,2 @@
-export const createAction = (type, payload) => ({type, payload});
+//test
+export const createAction = (type, payload) => ({ type, payload });
