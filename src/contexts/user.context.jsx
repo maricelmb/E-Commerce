@@ -15,24 +15,24 @@ export const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   //const [currentUser, setCurrentUser] = useState(null);
-  const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
-  console.log('input-->' + currentUser);
+  // const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
+  // console.log('input-->' + currentUser);
 
-  const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
-  };
+  // const setCurrentUser = (user) => {
+  //   dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
+  // };
 
-  const value = { currentUser, setCurrentUser };
+  // const value = { currentUser, setCurrentUser };
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChangedListener((user) => {
-      if (user) {
-        createUserDocumentFromAuth(user);
-      }
-      setCurrentUser(user);
-    });
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChangedListener((user) => {
+  //     if (user) {
+  //       createUserDocumentFromAuth(user);
+  //     }
+  //     setCurrentUser(user);
+  //   });
 
-    return unsubscribe;
-  }, []);
+  //   return unsubscribe;
+  // }, []);
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
